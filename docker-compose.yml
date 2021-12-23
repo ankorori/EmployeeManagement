@@ -3,6 +3,7 @@ volumes:
   php-fpm-socket:
   db-store:
   psysh-store:
+  phpmyadmin:
 services:
   app:
     build:
@@ -69,3 +70,22 @@ services:
       - MYSQL_USER=${DB_USER:-phper}
       - MYSQL_PASSWORD=${DB_PASS:-secret}
       - MYSQL_ROOT_PASSWORD=${DB_PASS:-secret}
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - DB_CONNECTION=mysql
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_DATABASE=${DB_NAME:-laravel_local}
+      - DB_USERNAME=${DB_USER:-phper}
+      - DB_PASSWORD=${DB_PASS:-secret}
+    links:
+      - mysql
+    ports:
+      - 8088:80
+    volumes:
+      - type: volume
+        source: phpmyadmin
+        target: /sessons
+        volume: 
+          nocopy: true
