@@ -1,7 +1,7 @@
-<!-- Departmentname Field -->
+<!-- Name Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('departmentName', 'Departmentname:') !!}
-    {!! Form::text('departmentName', null, ['class' => 'form-control','maxlength' => 20]) !!}
+    {!! Form::label('name', 'Name:') !!}
+    {!! Form::text('name', null, ['class' => 'form-control','maxlength' => 20]) !!}
 </div>
 
 <!-- Submit Field -->
