@@ -22,8 +22,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::middleware('auth')->group(function () {
-    Route::resource('employees', App\Http\Controllers\employeeController::class);
+    Route::resource('departments', App\Http\Controllers\departmentController::class);
 });
 
 
-Route::resource('departments', App\Http\Controllers\DepartmentsController::class);
+
