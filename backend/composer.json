@@ -15,7 +15,9 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.0",
-        "laravelcollective/html": "^6.2"
+        "laravelcollective/html": "^6.2",
+        "appointer/swaggervel": "dev-master",
+        "infyomlabs/swagger-generator": "dev-master"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
@@ -68,5 +70,11 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@github.com:InfyOmLabs/swaggervel.git"
+        }
+    ]
 }
