@@ -26,4 +26,4 @@ Route::middleware('auth')->group(function () {
 });
 
 
-
+Route::resource('employees', App\Http\Controllers\employeeController::class);

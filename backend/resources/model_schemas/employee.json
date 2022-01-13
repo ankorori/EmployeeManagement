@@ -24,10 +24,10 @@
         "inView": true
     },
     {
-        "name": "DepartmentId",
-        "dbType": "integer",
+        "name": "department_id",
+        "dbType": "integer:unsigned:foreign,departments,id",
         "htmlType": "select",
-        "validations": "required",
+        "validations": "required|numeric",
         "searchable": true,
         "fillable": true,
         "primary": false,

@@ -2,7 +2,7 @@
 
 @section('content')
     <ol class="breadcrumb">
-        <li class="breadcrumb-item">Departments</li>
+        <li class="breadcrumb-item">Employees</li>
     </ol>
     <div class="container-fluid">
         <div class="animated fadeIn">
@@ -12,13 +12,13 @@
                      <div class="card">
                          <div class="card-header">
                              <i class="fa fa-align-justify"></i>
-                             所属
-                             <a class="pull-right" href="{{ route('departments.create') }}"><i class="fa fa-plus-square fa-lg"></i></a>
+                             employees
+                             <a class="pull-right" href="{{ route('employees.create') }}"><i class="fa fa-plus-square fa-lg"></i></a>
                          </div>
                          <div class="card-body">
-                             @include('departments.table')
+                             @include('employees.table')
                               <div class="pull-right mr-3">
-
+                                     
                               </div>
                          </div>
                      </div>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDepartmentsTable extends Migration
+class CreateEmployeesTable extends Migration
 {
 
     /**
@@ -14,11 +14,13 @@ class CreateDepartmentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('departments', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('employees', function (Blueprint $table) {
+            $table->id('id');
             $table->string('name');
+            $table->integer('department_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
+            $table->foreign('department_id')->references('id')->on('departments');
         });
     }
 
@@ -29,6 +31,6 @@ class CreateDepartmentsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('departments');
+        Schema::drop('employees');
     }
 }
