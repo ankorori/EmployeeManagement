@@ -49,3 +49,9 @@ http://localhost
 
 - Base image
   - [mysql/mysql-server](https://hub.docker.com/r/mysql/mysql-server):8.0
+
+### Reference site
+- https://infyom.com/open-source/laravelgenerator/docs/8.0/introduction
+- https://readouble.com/laravel/8.x/ja/installation.html
+- https://qiita.com/ayasamind/items/a5bfa65ab0b8effb26a8
+- https://zenn.dev/okdyy75/articles/c254f6f48f92f9
