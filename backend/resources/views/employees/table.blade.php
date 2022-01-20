@@ -11,7 +11,7 @@
         @foreach($employees as $employee)
             <tr>
                 <td>{{ $employee->name }}</td>
-            <td>{{ $employee->department_id }}</td>
+            <td>{{ $employee->department->name }}</td>
                 <td>
                     {!! Form::open(['route' => ['employees.destroy', $employee->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
