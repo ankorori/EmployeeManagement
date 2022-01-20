@@ -13,14 +13,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  *
  * @property string $name
  */
-class department extends Model
+class department extends \Illuminate\Database\Eloquent\Model
 {
     use SoftDeletes;
 
     use HasFactory;
 
     public $table = 'departments';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -48,5 +48,14 @@ class department extends Model
         'name' => 'required|max:20'
     ];
 
-    
+    public static function selectlist()
+    {
+        $departments = department::all();
+        $list = [];
+        $list += ["" => "選択してください"];
+        foreach ($departments as $department) {
+        $list += [$department->id => $department->name];
+        }
+        return $list;
+    }
 }
