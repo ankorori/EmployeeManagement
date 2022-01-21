@@ -9,6 +9,6 @@
 <li class="nav-item {{ Request::is('employees*') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('employees.index') }}">
         <i class="nav-icon icon-cursor"></i>
-        <span>Employees</span>
+        <span>社員リスト</span>
     </a>
 </li>

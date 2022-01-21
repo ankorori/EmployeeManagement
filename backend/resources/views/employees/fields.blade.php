@@ -7,7 +7,7 @@
 <!-- Department Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('department_id', 'Department Id:') !!}
-    {!! Form::select('department_id', [$departments], null, ['class' => 'form-control']) !!}
+    {!! Form::select('department_id', App\Models\department::selectlist(), null,['class' => 'form-control']) !!}
 </div>
 
 <!-- Submit Field -->

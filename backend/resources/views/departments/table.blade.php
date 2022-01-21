@@ -2,7 +2,7 @@
     <table class="table table-striped" id="departments-table">
         <thead>
             <tr>
-                <th>Name</th>
+                <th>部署名</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>

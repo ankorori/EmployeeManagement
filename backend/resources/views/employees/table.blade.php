@@ -2,8 +2,8 @@
     <table class="table table-striped" id="employees-table">
         <thead>
             <tr>
-                <th>Name</th>
-        <th>Department Id</th>
+                <th>名前</th>
+        <th>所属部署</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -11,7 +11,7 @@
         @foreach($employees as $employee)
             <tr>
                 <td>{{ $employee->name }}</td>
-            <td>{{ $employee->department_id }}</td>
+            <td>{{ $employee->department->name }}</td>
                 <td>
                     {!! Form::open(['route' => ['employees.destroy', $employee->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

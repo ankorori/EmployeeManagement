@@ -35,14 +35,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  *      )
  * )
  */
-class employee extends Model
+class employee extends \Illuminate\Database\Eloquent\Model
 {
     use SoftDeletes;
 
     use HasFactory;
 
     public $table = 'employees';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -72,6 +72,8 @@ class employee extends Model
         'name' => 'required|max:20',
         'department_id' => 'required|numeric'
     ];
-
-    
+    public function department()
+    {
+        return $this->belongsTo('\app\models\department', 'department_id', 'id');
+    }
 }
