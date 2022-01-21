@@ -55,3 +55,7 @@ http://localhost
 - https://readouble.com/laravel/8.x/ja/installation.html
 - https://qiita.com/ayasamind/items/a5bfa65ab0b8effb26a8
 - https://zenn.dev/okdyy75/articles/c254f6f48f92f9
+
+### memo
+- sudo chown -R hoge:hoge backend/
+- sudo chmod 777 -R  backend/storage/framework/sessions/
