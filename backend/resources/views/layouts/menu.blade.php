@@ -12,3 +12,9 @@
         <span>社員リスト</span>
     </a>
 </li>
+<li class="nav-item {{ Request::is('pCos*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('pCos.index') }}">
+        <i class="nav-icon icon-cursor"></i>
+        <span>PC_OS</span>
+    </a>
+</li>

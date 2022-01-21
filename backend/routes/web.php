@@ -23,7 +23,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::middleware('auth')->group(function () {
     Route::resource('departments', App\Http\Controllers\departmentController::class);
+    Route::resource('employees', App\Http\Controllers\employeeController::class);
+    Route::resource('pCos', App\Http\Controllers\PCosController::class);
 });
-
-
-Route::resource('employees', App\Http\Controllers\employeeController::class);
