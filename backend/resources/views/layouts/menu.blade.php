@@ -24,3 +24,9 @@
         <span>Pc Accounts</span>
     </a>
 </li>
+<li class="nav-item {{ Request::is('gmailAccounts*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('gmailAccounts.index') }}">
+        <i class="nav-icon icon-cursor"></i>
+        <span>Gmail Accounts</span>
+    </a>
+</li>

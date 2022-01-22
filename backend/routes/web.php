@@ -25,3 +25,6 @@ Route::middleware('auth')->group(function () {
     Route::resource('pCos', App\Http\Controllers\PCosController::class);
     Route::resource('pcAccounts', App\Http\Controllers\pc_accountController::class);
 });
+
+
+Route::resource('gmailAccounts', App\Http\Controllers\gmail_accountController::class);
