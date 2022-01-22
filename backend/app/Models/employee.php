@@ -72,6 +72,16 @@ class employee extends \Illuminate\Database\Eloquent\Model
         'name' => 'required|max:20',
         'department_id' => 'required|numeric'
     ];
+    public static function selectlist()
+    {
+        $employees = employee::all();
+        $list = [];
+        $list += ["" => "選択してください"];
+        foreach ($employees as $employee) {
+        $list += [$employee->id => $employee->name];
+        }
+        return $list;
+    }
     public function department()
     {
         return $this->belongsTo('\app\models\department', 'department_id', 'id');
