@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect('/', 'login', 301);
 
 Auth::routes();
 
@@ -25,4 +23,5 @@ Route::middleware('auth')->group(function () {
     Route::resource('departments', App\Http\Controllers\departmentController::class);
     Route::resource('employees', App\Http\Controllers\employeeController::class);
     Route::resource('pCos', App\Http\Controllers\PCosController::class);
+    Route::resource('pcAccounts', App\Http\Controllers\pc_accountController::class);
 });
