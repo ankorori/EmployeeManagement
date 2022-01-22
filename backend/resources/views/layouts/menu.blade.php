@@ -18,3 +18,9 @@
         <span>PC_OS</span>
     </a>
 </li>
+<li class="nav-item {{ Request::is('pcAccounts*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('pcAccounts.index') }}">
+        <i class="nav-icon icon-cursor"></i>
+        <span>Pc Accounts</span>
+    </a>
+</li>
