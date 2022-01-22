@@ -30,3 +30,9 @@
         <span>Gmail Accounts</span>
     </a>
 </li>
+<li class="nav-item {{ Request::is('skypeAccounts*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('skypeAccounts.index') }}">
+        <i class="nav-icon icon-cursor"></i>
+        <span>Skype Accounts</span>
+    </a>
+</li>

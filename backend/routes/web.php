@@ -28,3 +28,6 @@ Route::middleware('auth')->group(function () {
 
 
 Route::resource('gmailAccounts', App\Http\Controllers\gmail_accountController::class);
+
+
+Route::resource('skypeAccounts', App\Http\Controllers\skype_accountController::class);
