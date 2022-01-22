@@ -84,6 +84,9 @@ class employee extends \Illuminate\Database\Eloquent\Model
     }
     public function department()
     {
-        return $this->belongsTo('\app\models\department', 'department_id', 'id');
+        return $this->belongsTo('\app\Models\department', 'department_id', 'id');
+    }
+    public function pc_accounts(){
+        return $this->hasMany('\app\Models\pc_account');
     }
 }

@@ -58,4 +58,7 @@ class department extends \Illuminate\Database\Eloquent\Model
         }
         return $list;
     }
+    public function employees(){
+        return $this->hasMany('\app\Models\employee');
+    }
 }

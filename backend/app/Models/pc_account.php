@@ -9,10 +9,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 /**
  * @SWG\Definition(
  *      definition="pc_account",
- *      required={"name", "password", "settingdate", "account_name"},
+ *      required={"employee_id", "password", "settingdate", "account_name"},
  *      @SWG\Property(
- *          property="name",
- *          description="name",
+ *          property="employee_id",
+ *          description="employee_id",
  *          type="string"
  *      ),
  *      @SWG\Property(
@@ -45,7 +45,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  *      )
  * )
  */
-class pc_account extends Model
+class pc_account extends \Illuminate\Database\Eloquent\Model
 {
     use SoftDeletes;
 
@@ -59,7 +59,7 @@ class pc_account extends Model
 
 
     public $fillable = [
-        'name',
+        'employee_id',
         'password',
         'settingdate',
         'account_name'
@@ -71,7 +71,7 @@ class pc_account extends Model
      * @var array
      */
     protected $casts = [
-        'name' => 'string',
+        'employee_id' => 'int',
         'password' => 'string',
         'settingdate' => 'date',
         'account_name' => 'string'
@@ -83,7 +83,7 @@ class pc_account extends Model
      * @var array
      */
     public static $rules = [
-        'name' => 'required|max:20',
+        'employee_id' => 'required',
         'password' => 'required|max:30',
         'settingdate' => 'required',
         'account_name' => 'required|max:20'
@@ -91,6 +91,6 @@ class pc_account extends Model
 
     public function employee()
     {
-        return $this->belongsTo('\app\models\employee', 'employee_id', 'id');
+        return $this->belongsTo('\App\Models\employee', 'employee_id', 'id');
     }
 }
