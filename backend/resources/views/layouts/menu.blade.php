@@ -36,3 +36,9 @@
         <span>Skype Accounts</span>
     </a>
 </li>
+<li class="nav-item {{ Request::is('slcakAccounts*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('slcakAccounts.index') }}">
+        <i class="nav-icon icon-cursor"></i>
+        <span>Slcak Accounts</span>
+    </a>
+</li>

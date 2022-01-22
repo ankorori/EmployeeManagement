@@ -31,3 +31,6 @@ Route::resource('gmailAccounts', App\Http\Controllers\gmail_accountController::c
 
 
 Route::resource('skypeAccounts', App\Http\Controllers\skype_accountController::class);
+
+
+Route::resource('slcakAccounts', App\Http\Controllers\slcak_accountController::class);
