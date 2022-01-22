@@ -24,7 +24,4 @@ Route::middleware('auth')->group(function () {
     Route::resource('employees', App\Http\Controllers\employeeController::class);
     Route::resource('pCos', App\Http\Controllers\PCosController::class);
     Route::resource('pcAccounts', App\Http\Controllers\pc_accountController::class);
-    Route::resource('gmailAccounts', App\Http\Controllers\gmail_accountController::class);
-    Route::resource('skypeAccounts', App\Http\Controllers\skype_accountController::class);
-    Route::resource('slcakAccounts', App\Http\Controllers\slcak_accountController::class);
 });

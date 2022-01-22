@@ -24,21 +24,6 @@
         <span>Pc Accounts</span>
     </a>
 </li>
-<li class="nav-item {{ Request::is('gmailAccounts*') ? 'active' : '' }}">
-    <a class="nav-link" href="{{ route('gmailAccounts.index') }}">
-        <i class="nav-icon icon-cursor"></i>
-        <span>Gmail Accounts</span>
-    </a>
-</li>
-<li class="nav-item {{ Request::is('skypeAccounts*') ? 'active' : '' }}">
-    <a class="nav-link" href="{{ route('skypeAccounts.index') }}">
-        <i class="nav-icon icon-cursor"></i>
-        <span>Skype Accounts</span>
-    </a>
-</li>
-<li class="nav-item {{ Request::is('slcakAccounts*') ? 'active' : '' }}">
-    <a class="nav-link" href="{{ route('slcakAccounts.index') }}">
-        <i class="nav-icon icon-cursor"></i>
-        <span>Slcak Accounts</span>
-    </a>
-</li>
+
+
+
