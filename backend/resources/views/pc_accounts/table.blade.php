@@ -3,19 +3,19 @@
         <thead>
             <tr>
                 <th>Name</th>
-        <th>Password</th>
-        <th>Settingdate</th>
-        <th>Account Name</th>
+                <th>Account Name</th>
+                <th>Password</th>
+                <th>Settingdate</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
         <tbody>
         @foreach($pcAccounts as $pcAccount)
             <tr>
-                <td>{{ $pcAccount->name }}</td>
-            <td>{{ $pcAccount->password }}</td>
-            <td>{{ $pcAccount->settingdate }}</td>
-            <td>{{ $pcAccount->account_name }}</td>
+                <td><a href="{{ route('employees.edit', [$pcAccount->employee->id]) }}">{{ $pcAccount->employee->name }}</a></td>
+                <td>{{ $pcAccount->account_name }}</td>
+                <td>{{ $pcAccount->password }}</td>
+                <td>{{ $pcAccount->settingdate }}</td>
                 <td>
                     {!! Form::open(['route' => ['pcAccounts.destroy', $pcAccount->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
