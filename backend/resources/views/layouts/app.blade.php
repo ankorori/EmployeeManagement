@@ -21,10 +21,10 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="#">
-        <img class="navbar-brand-full" src="https://www.hanjou.co.jp/wp-content/themes/hanjou/images/common/logo_headder_sp.svg" width="120" height="130"
+        <img class="navbar-brand-full" src="https://www.hanjou.co.jp/wp-content/themes/hanjou/images/common/logo_headder_sp.svg" width="120" height="30"
              alt="Logo">
         <img class="navbar-brand-minimized" src="https://www.hanjou.co.jp/wp-content/themes/hanjou/images/common/logo_headder_sp.svg" width="120"
-             height="130" alt="Logo">
+             height="30" alt="Logo">
     </a>
     <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
         <span class="navbar-toggler-icon"></span>
