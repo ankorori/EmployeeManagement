@@ -27,3 +27,9 @@
 
 
 
+<li class="nav-item {{ Request::is('webAccounts*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('webAccounts.index') }}">
+        <i class="nav-icon icon-cursor"></i>
+        <span>Web Accounts</span>
+    </a>
+</li>

@@ -24,4 +24,5 @@ Route::middleware('auth')->group(function () {
     Route::resource('employees', App\Http\Controllers\employeeController::class);
     Route::resource('pCos', App\Http\Controllers\PCosController::class);
     Route::resource('pcAccounts', App\Http\Controllers\pc_accountController::class);
+    Route::resource('webAccounts', App\Http\Controllers\Web_accountController::class);
 });
