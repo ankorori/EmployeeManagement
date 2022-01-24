@@ -13,7 +13,7 @@
         @foreach($pcAccounts as $pcAccount)
             <tr>
                 <td><a href="{{ route('employees.edit', [$pcAccount->employee->id]) }}">{{ $pcAccount->employee->name }}</a></td>
-                <td>{{ $pcAccount->account_name }}</td>
+                <td><a href="{{ route('pcAccounts.show', [$pcAccount->id]) }}">{{ $pcAccount->account_name }}</a></td>
                 <td>{{ $pcAccount->password }}</td>
                 <td>{{ $pcAccount->settingdate }}</td>
                 <td>
