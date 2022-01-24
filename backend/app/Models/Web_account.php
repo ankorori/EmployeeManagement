@@ -39,14 +39,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  *      )
  * )
  */
-class Web_account extends Model
+class Web_account extends \Illuminate\Database\Eloquent\Model
 {
     use SoftDeletes;
 
     use HasFactory;
 
     public $table = 'web_accounts';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -56,7 +56,7 @@ class Web_account extends Model
         'name',
         'password',
         'note',
-        'account_category_id'
+        'Web_account_category_id'
     ];
 
     /**
@@ -78,9 +78,12 @@ class Web_account extends Model
     public static $rules = [
         'name' => 'required|max:100',
         'password' => 'required|max:100',
-        'note' => 'required',
-        'account_category_id' => 'required'
+        //'note' => 'required',
+        'Web_account_category_id' => 'required'
     ];
 
-    
+    public function Web_account_category()
+    {
+        return $this->hasMany('App\Models\Web_account_category','id','Web_account_category_id');
+    }
 }

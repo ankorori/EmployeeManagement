@@ -3,9 +3,9 @@
         <thead>
             <tr>
                 <th>Name</th>
-        <th>Password</th>
-        <th>Note</th>
-        <th>Account Category Id</th>
+                <th>Password</th>
+                <th>Note</th>
+                <th>Account Category Id</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -13,9 +13,9 @@
         @foreach($webAccounts as $webAccount)
             <tr>
                 <td>{{ $webAccount->name }}</td>
-            <td>{{ $webAccount->password }}</td>
-            <td>{{ $webAccount->note }}</td>
-            <td>{{ $webAccount->account_category_id }}</td>
+                <td>{{ $webAccount->password }}</td>
+                <td>{{ $webAccount->note }}</td>
+                <td>{{ $webAccount->Web_account_category }}</td>
                 <td>
                     {!! Form::open(['route' => ['webAccounts.destroy', $webAccount->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

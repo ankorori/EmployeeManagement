@@ -33,3 +33,9 @@
         <span>Web Accounts</span>
     </a>
 </li>
+<li class="nav-item {{ Request::is('webAccountCategories*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('webAccountCategories.index') }}">
+        <i class="nav-icon icon-cursor"></i>
+        <span>Web Account Categories</span>
+    </a>
+</li>

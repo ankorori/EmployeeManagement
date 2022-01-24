@@ -51,10 +51,9 @@ class department extends \Illuminate\Database\Eloquent\Model
     public static function selectlist()
     {
         $departments = department::all();
-        $list = [];
-        $list += ["" => "選択してください"];
+        $list = ["" => "選択してください"];
         foreach ($departments as $department) {
-        $list += [$department->id => $department->name];
+            $list += [$department->id => $department->name];
         }
         return $list;
     }

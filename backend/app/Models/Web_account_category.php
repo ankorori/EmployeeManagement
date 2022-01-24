@@ -8,18 +8,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * @SWG\Definition(
- *      definition="employee",
- *      required={"name", "department_id"},
+ *      definition="Web_account_category",
+ *      required={"name"},
  *      @SWG\Property(
  *          property="name",
  *          description="name",
  *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="department_id",
- *          description="department_id",
- *          type="integer",
- *          format="int32"
  *      ),
  *      @SWG\Property(
  *          property="created_at",
@@ -35,13 +29,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  *      )
  * )
  */
-class employee extends \Illuminate\Database\Eloquent\Model
+class Web_account_category extends \Illuminate\Database\Eloquent\Model
 {
     use SoftDeletes;
 
     use HasFactory;
 
-    public $table = 'employees';
+    public $table = 'web_account_categories';
 
 
     protected $dates = ['deleted_at'];
@@ -49,8 +43,7 @@ class employee extends \Illuminate\Database\Eloquent\Model
 
 
     public $fillable = [
-        'name',
-        'department_id'
+        'name'
     ];
 
     /**
@@ -59,8 +52,7 @@ class employee extends \Illuminate\Database\Eloquent\Model
      * @var array
      */
     protected $casts = [
-        'name' => 'string',
-        'department_id' => 'integer'
+        'name' => 'string'
     ];
 
     /**
@@ -69,23 +61,20 @@ class employee extends \Illuminate\Database\Eloquent\Model
      * @var array
      */
     public static $rules = [
-        'name' => 'required|max:20',
-        'department_id' => 'required|numeric'
+        'name' => 'required|max:100'
     ];
+
+    public function Web_account()
+    {
+        return $this->belongsTo('App\Models\Web_account','id','Web_account_category_id');
+    }
     public static function selectlist()
     {
-        $employees = employee::all();
+        $web_account_categorys = Web_account_category::all();
         $list = ["" => "選択してください"];
-        foreach ($employees as $employee) {
-            $list += [$employee->id => $employee->name];
+        foreach ($web_account_categorys as $category) {
+            $list += [$category->id => $category->name];
         }
         return $list;
-    }
-    public function department()
-    {
-        return $this->belongsTo('\app\Models\department', 'department_id', 'id');
-    }
-    public function pc_accounts(){
-        return $this->hasMany('\app\Models\pc_account');
     }
 }

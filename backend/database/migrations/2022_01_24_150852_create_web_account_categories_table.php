@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWebAccountsTable extends Migration
+class CreateWebAccountCategoriesTable extends Migration
 {
 
     /**
@@ -14,12 +14,9 @@ class CreateWebAccountsTable extends Migration
      */
     public function up()
     {
-        Schema::create('web_accounts', function (Blueprint $table) {
+        Schema::create('web_account_categories', function (Blueprint $table) {
             $table->id('id');
             $table->string('name');
-            $table->string('password');
-            $table->text('note');
-            $table->integer('Web_account_category_id');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -32,6 +29,6 @@ class CreateWebAccountsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('web_accounts');
+        Schema::drop('web_account_categories');
     }
 }

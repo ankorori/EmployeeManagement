@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Web_account;
+use App\Models\Web_account_category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class Web_accountFactory extends Factory
+class Web_account_categoryFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Web_account::class;
+    protected $model = Web_account_category::class;
 
     /**
      * Define the model's default state.
@@ -23,9 +23,6 @@ class Web_accountFactory extends Factory
     {
         return [
             'name' => $this->faker->word,
-        'password' => $this->faker->word,
-        'note' => $this->faker->text,
-        'Web_account_category_id' => $this->faker->word,
         'created_at' => $this->faker->date('Y-m-d H:i:s'),
         'updated_at' => $this->faker->date('Y-m-d H:i:s')
         ];

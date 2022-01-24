@@ -10,16 +10,16 @@
     {!! Form::text('password', null, ['class' => 'form-control','maxlength' => 100]) !!}
 </div>
 
+<!-- Account Category Id Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('Web_account_category_id', 'Account Category Id:') !!}
+    {!! Form::select('Web_account_category_id', App\Models\Web_account_category::selectlist(), null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Note Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('note', 'Note:') !!}
     {!! Form::textarea('note', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Account Category Id Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('account_category_id', 'Account Category Id:') !!}
-    {!! Form::select('account_category_id', ], null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Submit Field -->
