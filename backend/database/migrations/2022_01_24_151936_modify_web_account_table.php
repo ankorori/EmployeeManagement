@@ -14,7 +14,8 @@ class ModifyWebAccountTable extends Migration
     public function up()
     {
         Schema::table('web_accounts', function (Blueprint $table) {
-            $table->biginteger('Web_account_category_id')->change()->foreign('Web_account_category_id')->unsigned()->references('id')->on('web_account_categories');
+            $table->biginteger('Web_account_category_id')->change();
+            $table->foreign('Web_account_category_id')->references('id')->on('web_account_categories');
         });
     }
 
