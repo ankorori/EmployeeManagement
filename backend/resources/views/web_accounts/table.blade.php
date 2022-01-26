@@ -15,7 +15,7 @@
                 <td>{{ $webAccount->name }}</td>
                 <td>{{ $webAccount->password }}</td>
                 <td>{{ $webAccount->note }}</td>
-                <td>{{ $webAccount->Web_account_category }}</td>
+                <td>{{ $webAccount->Web_account_category->name }}</td>
                 <td>
                     {!! Form::open(['route' => ['webAccounts.destroy', $webAccount->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

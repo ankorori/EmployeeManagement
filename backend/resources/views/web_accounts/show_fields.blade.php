@@ -18,8 +18,8 @@
 
 <!-- Account Category Id Field -->
 <div class="form-group">
-    {!! Form::label('account_category_id', 'Account Category Id:') !!}
-    <p>{{ $webAccount->account_category_id }}</p>
+    {!! Form::label('account_category_name', 'Account Category name:') !!}
+    <p>{{ $webAccount->Web_account_category->name }}</p>
 </div>
 
 <!-- Created At Field -->

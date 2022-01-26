@@ -84,6 +84,6 @@ class Web_account extends \Illuminate\Database\Eloquent\Model
 
     public function Web_account_category()
     {
-        return $this->hasMany('App\Models\Web_account_category','id','Web_account_category_id');
+        return $this->belongsTo('App\Models\Web_account_category','Web_account_category_id','id');
     }
 }
