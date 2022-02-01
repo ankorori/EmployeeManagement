@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 /**
  * @SWG\Definition(
  *      definition="Web_account",
- *      required={"name", "password", "note", "account_category_id"},
+ *      required={"name", "password", "account_category_id"},
  *      @SWG\Property(
  *          property="name",
  *          description="name",
@@ -78,12 +78,11 @@ class Web_account extends \Illuminate\Database\Eloquent\Model
     public static $rules = [
         'name' => 'required|max:100',
         'password' => 'required|max:100',
-        //'note' => 'required',
         'Web_account_category_id' => 'required'
     ];
 
-    public function Web_account_category()
+    public function web_account_category()
     {
-        return $this->belongsTo('App\Models\Web_account_category','Web_account_category_id','id');
+        return $this->belongsTo('App\Models\Web_account_category','web_account_category_id','id');
     }
 }

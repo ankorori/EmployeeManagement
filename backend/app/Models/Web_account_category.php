@@ -66,7 +66,7 @@ class Web_account_category extends \Illuminate\Database\Eloquent\Model
 
     public function Web_account()
     {
-        return $this->belongsTo('App\Models\Web_account','id','Web_account_category_id');
+        return $this->belongsTo('App\Models\Web_account','id','web_account_category_id');
     }
     public static function selectlist()
     {
