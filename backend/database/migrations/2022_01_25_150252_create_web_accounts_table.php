@@ -19,7 +19,8 @@ class CreateWebAccountsTable extends Migration
             $table->string('name');
             $table->string('password');
             $table->text('note')->nullable();
-            $table->integer('Web_account_category_id');
+            $table->biginteger('web_account_category_id')->unsigned();
+            $table->foreign('web_account_category_id')->references('id')->on('web_account_categories');
             $table->timestamps();
             $table->softDeletes();
         });

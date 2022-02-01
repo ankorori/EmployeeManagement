@@ -16,7 +16,8 @@ class CreatePcAccountsTable extends Migration
     {
         Schema::create('pc_accounts', function (Blueprint $table) {
             $table->id('id');
-            $table->string('name');
+            $table->biginteger('employee_id')->unsigned();
+            $table->foreign('employee_id')->references('id')->on('employees');
             $table->string('password');
             $table->date('settingdate');
             $table->string('account_name');
