@@ -1,5 +1,3 @@
-
-
 <li class="nav-item {{ Request::is('departments*') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('departments.index') }}">
         <i class="nav-icon icon-cursor"></i>
@@ -24,9 +22,6 @@
         <span>Pc Accounts</span>
     </a>
 </li>
-
-
-
 <li class="nav-item {{ Request::is('webAccounts*') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('webAccounts.index') }}">
         <i class="nav-icon icon-cursor"></i>
@@ -38,4 +33,26 @@
         <i class="nav-icon icon-cursor"></i>
         <span>Web Account Categories</span>
     </a>
+</li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ドロップダウン</a>
+    <div class="dropdown-menu" aria-labelledby="dropdown01">
+      <!-- <a class="dropdown-item" href="#">Action</a> -->
+      <a class="dropdown-item" href="#">アクション</a>
+      <!-- <a class="dropdown-item" href="#">Another action</a> -->
+      <a class="dropdown-item" href="#">他のアクション</a>
+      <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+      <a class="dropdown-item" href="#">それ以外</a>
+    </div>
+</li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ドロップダウン</a>
+    <div class="dropdown-menu" aria-labelledby="dropdown01">
+      <!-- <a class="dropdown-item" href="#">Action</a> -->
+      <a class="dropdown-item" href="#">アクション</a>
+      <!-- <a class="dropdown-item" href="#">Another action</a> -->
+      <a class="dropdown-item" href="#">他のアクション</a>
+      <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+      <a class="dropdown-item" href="#">それ以外</a>
+    </div>
 </li>
