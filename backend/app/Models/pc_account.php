@@ -93,4 +93,8 @@ class pc_account extends \Illuminate\Database\Eloquent\Model
     {
         return $this->belongsTo('\App\Models\employee', 'employee_id', 'id');
     }
+    public function Web_accounts()
+    {
+        return $this->belongsToMany('\App\Models\Web_account','web_account_pc_account')->withTimestamps();
+    }
 }

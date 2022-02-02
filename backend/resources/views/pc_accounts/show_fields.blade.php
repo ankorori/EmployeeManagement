@@ -34,3 +34,9 @@
     <p>{{ $pcAccount->updated_at }}</p>
 </div>
 
+<div class="form-group">
+    {!! Form::label('Web_accounts', 'Web-accounts:') !!}
+    @foreach ($pcAccount->Web_accounts as $web_account)
+    <p>{{ $web_account->web_account_category->name }}</p>
+    @endforeach
+</div>
