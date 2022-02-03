@@ -18,6 +18,7 @@
                                 <strong>Create Pc Account</strong>
                             </div>
                             <div class="card-body">
+                                ※使用者名のドロップダウンに登録したい人の名前が無い場合は<a href="{!! route('employees.create') !!}">こちら</a>から登録お願いします。<br>
                                 {!! Form::open(['route' => 'pcAccounts.store']) !!}
 
                                    @include('pc_accounts.fields')
