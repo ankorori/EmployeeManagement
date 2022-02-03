@@ -1,7 +1,7 @@
 <!-- Name Field -->
 <div class="form-group">
     {!! Form::label('name', 'Name:') !!}
-    <p>{{ $pcAccount->name }}</p>
+    <p>{{ $pcAccount->employee->name }}</p>
 </div>
 
 <!-- Password Field -->
@@ -37,6 +37,7 @@
 <div class="form-group">
     {!! Form::label('Web_accounts', 'Web-accounts:') !!}
     @foreach ($pcAccount->Web_accounts as $web_account)
-    <p>{{ $web_account->web_account_category->name }}</p>
+    <br>
+    <strong><a href="{{ route('webAccounts.edit', [$web_account->id]) }}" class='btn btn-ghost-info'><i class="fa fa-edit"></i>{{ $web_account->web_account_category->name }}</a></strong>
     @endforeach
 </div>
