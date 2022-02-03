@@ -97,4 +97,13 @@ class pc_account extends \Illuminate\Database\Eloquent\Model
     {
         return $this->belongsToMany('\App\Models\Web_account','web_account_pc_account')->withTimestamps();
     }
+    public static function selectlist()
+    {
+        $pc_accounts = pc_account::all();
+        $list = ["" => "選択してください"];
+        foreach ($pc_accounts as $pc_account) {
+            $list += [$pc_account->id => $pc_account->account_name. ':' .$pc_account->employee->name];
+        }
+        return $list;
+    }
 }
