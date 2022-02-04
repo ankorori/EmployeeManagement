@@ -56,3 +56,9 @@
       <a class="dropdown-item" href="#">それ以外</a>
     </div>
 </li>
+<li class="nav-item {{ Request::is('devices*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('devices.index') }}">
+        <i class="nav-icon icon-cursor"></i>
+        <span>Devices</span>
+    </a>
+</li>
