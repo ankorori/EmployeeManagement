@@ -7,5 +7,5 @@
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
     {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{{ route('pCos.index') }}" class="btn btn-secondary">Cancel</a>
+    <a href="{{ route('pcos.index') }}" class="btn btn-secondary">Cancel</a>
 </div>

@@ -3,7 +3,7 @@
 @section('content')
      <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                <a href="{{ route('pCos.index') }}">P Cos</a>
+                <a href="{{ route('pcos.index') }}">P Cos</a>
             </li>
             <li class="breadcrumb-item active">Detail</li>
      </ol>
@@ -15,10 +15,10 @@
                          <div class="card">
                              <div class="card-header">
                                  <strong>Details</strong>
-                                  <a href="{{ route('pCos.index') }}" class="btn btn-light">Back</a>
+                                  <a href="{{ route('pcos.index') }}" class="btn btn-light">Back</a>
                              </div>
                              <div class="card-body">
-                                 @include('p_cos.show_fields')
+                                 @include('pcos.show_fields')
                              </div>
                          </div>
                      </div>

@@ -14,7 +14,7 @@ class CreatePCosTable extends Migration
      */
     public function up()
     {
-        Schema::create('p_cos', function (Blueprint $table) {
+        Schema::create('pc_os', function (Blueprint $table) {
             $table->id('id');
             $table->string('name');
             $table->timestamps();

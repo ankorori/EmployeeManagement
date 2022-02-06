@@ -1,5 +1,5 @@
 <div class="table-responsive-sm">
-    <table class="table table-striped" id="pCos-table">
+    <table class="table table-striped" id="pcos-table">
         <thead>
             <tr>
                 <th>Name</th>
@@ -7,14 +7,14 @@
             </tr>
         </thead>
         <tbody>
-        @foreach($pCos as $pCos)
+        @foreach($pcos as $pcos)
             <tr>
-                <td>{{ $pCos->name }}</td>
+                <td>{{ $pcos->name }}</td>
                 <td>
-                    {!! Form::open(['route' => ['pCos.destroy', $pCos->id], 'method' => 'delete']) !!}
+                    {!! Form::open(['route' => ['pcos.destroy', $pcos->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
-                        <a href="{{ route('pCos.show', [$pCos->id]) }}" class='btn btn-ghost-success'><i class="fa fa-eye"></i></a>
-                        <a href="{{ route('pCos.edit', [$pCos->id]) }}" class='btn btn-ghost-info'><i class="fa fa-edit"></i></a>
+                        <a href="{{ route('pcos.show', [$pcos->id]) }}" class='btn btn-ghost-success'><i class="fa fa-eye"></i></a>
+                        <a href="{{ route('pcos.edit', [$pcos->id]) }}" class='btn btn-ghost-info'><i class="fa fa-edit"></i></a>
                         {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-ghost-danger', 'onclick' => "return confirm('Are you sure?')"]) !!}
                     </div>
                     {!! Form::close() !!}

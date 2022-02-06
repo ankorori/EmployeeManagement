@@ -35,8 +35,8 @@ class PCos extends Model
 
     use HasFactory;
 
-    public $table = 'p_cos';
-    
+    public $table = 'pc_os';
+
 
     protected $dates = ['deleted_at'];
 
@@ -64,5 +64,5 @@ class PCos extends Model
         'name' => 'required|max:20'
     ];
 
-    
+
 }
