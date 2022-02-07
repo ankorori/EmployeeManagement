@@ -63,6 +63,13 @@ class PCos extends Model
     public static $rules = [
         'name' => 'required|max:20'
     ];
-
-
+    public static function selectlist()
+    {
+        $os_list = PCos::all();
+        $list = ["" => "選択してください"];
+        foreach ($os_list as $os) {
+            $list += [$os->id => $os->name];
+        }
+        return $list;
+    }
 }

@@ -19,13 +19,13 @@
 <!-- Pc Account Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('pc_account_id', 'Pc Account Id:') !!}
-    {!! Form::select('pc_account_id', [], null, ['class' => 'form-control']) !!}
+    {!! Form::select('pc_account_id', App\Models\pc_account::selectlist(), null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Ostype Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('ostype', 'Ostype:') !!}
-    {!! Form::select('ostype', [], null, ['class' => 'form-control']) !!}
+    {!! Form::select('ostype', App\Models\PCos::selectlist(), null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Is Cd Dvd Drive Field -->
