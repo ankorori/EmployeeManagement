@@ -13,11 +13,11 @@ use Response;
 class PCosController extends AppBaseController
 {
     /** @var  PCosRepository */
-    private $pCosRepository;
+    private $pcosRepository;
 
-    public function __construct(PCosRepository $pCosRepo)
+    public function __construct(PCosRepository $pcosRepo)
     {
-        $this->pCosRepository = $pCosRepo;
+        $this->pcosRepository = $pcosRepo;
     }
 
     /**
@@ -29,10 +29,10 @@ class PCosController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $pCos = $this->pCosRepository->all();
+        $pcos = $this->pcosRepository->all();
 
-        return view('p_cos.index')
-            ->with('pCos', $pCos);
+        return view('pcos.index')
+            ->with('pcos', $pcos);
     }
 
     /**
@@ -42,7 +42,7 @@ class PCosController extends AppBaseController
      */
     public function create()
     {
-        return view('p_cos.create');
+        return view('pcos.create');
     }
 
     /**
@@ -56,11 +56,11 @@ class PCosController extends AppBaseController
     {
         $input = $request->all();
 
-        $pCos = $this->pCosRepository->create($input);
+        $pcos = $this->pcosRepository->create($input);
 
-        Flash::success('P Cos saved successfully.');
+        Flash::success('PCos saved successfully.');
 
-        return redirect(route('pCos.index'));
+        return redirect(route('pcos.index'));
     }
 
     /**
@@ -72,15 +72,15 @@ class PCosController extends AppBaseController
      */
     public function show($id)
     {
-        $pCos = $this->pCosRepository->find($id);
+        $pcos = $this->pcosRepository->find($id);
 
-        if (empty($pCos)) {
-            Flash::error('P Cos not found');
+        if (empty($pcos)) {
+            Flash::error('PCos not found');
 
-            return redirect(route('pCos.index'));
+            return redirect(route('pcos.index'));
         }
 
-        return view('p_cos.show')->with('pCos', $pCos);
+        return view('pcos.show')->with('pcos', $pcos);
     }
 
     /**
@@ -92,15 +92,15 @@ class PCosController extends AppBaseController
      */
     public function edit($id)
     {
-        $pCos = $this->pCosRepository->find($id);
+        $pcos = $this->pcosRepository->find($id);
 
-        if (empty($pCos)) {
-            Flash::error('P Cos not found');
+        if (empty($pcos)) {
+            Flash::error('pcos not found');
 
-            return redirect(route('pCos.index'));
+            return redirect(route('pcos.index'));
         }
 
-        return view('p_cos.edit')->with('pCos', $pCos);
+        return view('pcos.edit')->with('pcos', $pcos);
     }
 
     /**
@@ -113,19 +113,19 @@ class PCosController extends AppBaseController
      */
     public function update($id, UpdatePCosRequest $request)
     {
-        $pCos = $this->pCosRepository->find($id);
+        $pcos = $this->pcosRepository->find($id);
 
-        if (empty($pCos)) {
-            Flash::error('P Cos not found');
+        if (empty($pcos)) {
+            Flash::error('pcos not found');
 
-            return redirect(route('pCos.index'));
+            return redirect(route('pcos.index'));
         }
 
-        $pCos = $this->pCosRepository->update($request->all(), $id);
+        $pcos = $this->pcosRepository->update($request->all(), $id);
 
-        Flash::success('P Cos updated successfully.');
+        Flash::success('pcos updated successfully.');
 
-        return redirect(route('pCos.index'));
+        return redirect(route('pcos.index'));
     }
 
     /**
@@ -139,18 +139,18 @@ class PCosController extends AppBaseController
      */
     public function destroy($id)
     {
-        $pCos = $this->pCosRepository->find($id);
+        $pcos = $this->pcosRepository->find($id);
 
-        if (empty($pCos)) {
-            Flash::error('P Cos not found');
+        if (empty($pcos)) {
+            Flash::error('pcos not found');
 
-            return redirect(route('pCos.index'));
+            return redirect(route('pcos.index'));
         }
 
-        $this->pCosRepository->delete($id);
+        $this->pcosRepository->delete($id);
 
-        Flash::success('P Cos deleted successfully.');
+        Flash::success('pcos deleted successfully.');
 
-        return redirect(route('pCos.index'));
+        return redirect(route('pcos.index'));
     }
 }

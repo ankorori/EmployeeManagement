@@ -3,7 +3,7 @@
 @section('content')
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-         <a href="{!! route('pCos.index') !!}">PCos</a>
+         <a href="{!! route('pcos.index') !!}">PCos</a>
       </li>
       <li class="breadcrumb-item active">Create</li>
     </ol>
@@ -15,12 +15,12 @@
                         <div class="card">
                             <div class="card-header">
                                 <i class="fa fa-plus-square-o fa-lg"></i>
-                                <strong>Create P Cos</strong>
+                                <strong>Create PCos</strong>
                             </div>
                             <div class="card-body">
-                                {!! Form::open(['route' => 'pCos.store']) !!}
+                                {!! Form::open(['route' => 'pcos.store']) !!}
 
-                                   @include('p_cos.fields')
+                                   @include('pcos.fields')
 
                                 {!! Form::close() !!}
                             </div>

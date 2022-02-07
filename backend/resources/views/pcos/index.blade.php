@@ -13,12 +13,12 @@
                          <div class="card-header">
                              <i class="fa fa-align-justify"></i>
                              PCos
-                             <a class="pull-right" href="{{ route('pCos.create') }}"><i class="fa fa-plus-square fa-lg"></i></a>
+                             <a class="pull-right" href="{{ route('pcos.create') }}"><i class="fa fa-plus-square fa-lg"></i></a>
                          </div>
                          <div class="card-body">
-                             @include('p_cos.table')
+                             @include('pcos.table')
                               <div class="pull-right mr-3">
-                                     
+
                               </div>
                          </div>
                      </div>

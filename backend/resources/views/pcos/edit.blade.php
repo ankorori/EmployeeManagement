@@ -3,7 +3,7 @@
 @section('content')
     <ol class="breadcrumb">
           <li class="breadcrumb-item">
-             <a href="{!! route('pCos.index') !!}">P Cos</a>
+             <a href="{!! route('pcos.index') !!}">P Cos</a>
           </li>
           <li class="breadcrumb-item active">Edit</li>
         </ol>
@@ -18,9 +18,9 @@
                               <strong>Edit P Cos</strong>
                           </div>
                           <div class="card-body">
-                              {!! Form::model($pCos, ['route' => ['pCos.update', $pCos->id], 'method' => 'patch']) !!}
+                              {!! Form::model($pcos, ['route' => ['pcos.update', $pcos->id], 'method' => 'patch']) !!}
 
-                              @include('p_cos.fields')
+                              @include('pcos.fields')
 
                               {!! Form::close() !!}
                             </div>
