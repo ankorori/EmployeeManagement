@@ -29,7 +29,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  *      )
  * )
  */
-class PCos extends Model
+class PCos extends \Illuminate\Database\Eloquent\Model
 {
     use SoftDeletes;
 
@@ -71,5 +71,9 @@ class PCos extends Model
             $list += [$os->id => $os->name];
         }
         return $list;
+    }
+    public function device()
+    {
+        return $this->belongsTo('\App\Models\Device', 'id', 'ostype_id');
     }
 }

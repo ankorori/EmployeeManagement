@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 /**
  * @SWG\Definition(
  *      definition="Device",
- *      required={"devics_number", "company", "pc_name", "pc_account_id", "ostype"},
+ *      required={"devics_number", "company", "pc_name", "pc_account_id", "ostype_id"},
  *      @SWG\Property(
  *          property="devics_number",
  *          description="devics_number",
@@ -39,25 +39,22 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  *      )
  * )
  */
-class Device extends Model
+class Device extends \Illuminate\Database\Eloquent\Model
 {
     use SoftDeletes;
 
     use HasFactory;
 
     public $table = 'devices';
-    
 
     protected $dates = ['deleted_at'];
-
-
 
     public $fillable = [
         'devics_number',
         'company',
         'pc_name',
         'pc_account_id',
-        'ostype',
+        'ostype_id',
         'is_cd_dvd_drive',
         'is_wired_LAN',
         'is_wireless_LAN',
@@ -90,8 +87,16 @@ class Device extends Model
         'company' => 'required|max:20',
         'pc_name' => 'required|max:20',
         'pc_account_id' => 'required',
-        'ostype' => 'required'
+        'ostype_id' => 'required'
     ];
 
-    
+    public function pcos()
+    {
+        return $this->belongsTo('\App\Models\PCos', 'ostype_id', 'id');
+    }
+
+    public function pc_account()
+    {
+        return $this->belongsTo('\App\Models\pc_account', 'pc_account_id', 'id');
+    }
 }
