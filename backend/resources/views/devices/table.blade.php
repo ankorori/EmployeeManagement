@@ -25,8 +25,8 @@
                 <td>{{ $device->devics_number }}</td>
             <td>{{ $device->company }}</td>
             <td>{{ $device->pc_name }}</td>
-            <td>{{ $device->pc_account_id }}</td>
-            <td>{{ $device->ostype }}</td>
+            <td>{{ $device->pc_account->account_name }}</td>
+            <td>{{ $device->PCos->name }}</td>
             <td>{{ $device->is_cd_dvd_drive }}</td>
             <td>{{ $device->is_wired_LAN }}</td>
             <td>{{ $device->is_wireless_LAN }}</td>
