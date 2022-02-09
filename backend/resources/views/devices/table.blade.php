@@ -27,12 +27,12 @@
             <td>{{ $device->pc_name }}</td>
             <td>{{ $device->pc_account->account_name }}</td>
             <td>{{ $device->PCos->name }}</td>
-            <td>{{ $device->is_cd_dvd_drive }}</td>
-            <td>{{ $device->is_wired_LAN }}</td>
-            <td>{{ $device->is_wireless_LAN }}</td>
-            <td>{{ $device->is_internet }}</td>
-            <td>{{ $device->is_taking_out }}</td>
-            <td>{{ $device->is_LanScopeCat }}</td>
+            <td>{{ $device->is_cd_dvd_drive ? '有' : '無'}}</td>
+            <td>{{ $device->is_wired_LAN ? '有' : '無' }}</td>
+            <td>{{ $device->is_wireless_LAN ? '有' : '無' }}</td>
+            <td>{{ $device->is_internet ? '有' : '無' }}</td>
+            <td>{{ $device->is_taking_out ? '有' : '無' }}</td>
+            <td>{{ $device->is_LanScopeCat ? '有' : '無' }}</td>
             <td>{{ $device->web_browser_id }}</td>
             <td>{{ $device->mailer }}</td>
             <td>{{ $device->antivirus_software }}</td>
