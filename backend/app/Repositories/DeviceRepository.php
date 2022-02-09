@@ -21,7 +21,7 @@ class DeviceRepository extends BaseRepository
         'company',
         'pc_name',
         'pc_account_id',
-        'ostype',
+        'ostype_id',
         'is_cd_dvd_drive',
         'is_wired_LAN',
         'is_wireless_LAN',
