@@ -24,8 +24,8 @@
 
 <!-- Ostype Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('ostype', 'Ostype:') !!}
-    {!! Form::select('ostype', App\Models\PCos::selectlist(), null, ['class' => 'form-control']) !!}
+    {!! Form::label('ostype_id', 'Ostype:') !!}
+    {!! Form::select('ostype_id', App\Models\PCos::selectlist(), null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Is Cd Dvd Drive Field -->
