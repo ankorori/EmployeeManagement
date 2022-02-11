@@ -6,6 +6,7 @@ use App\Http\Requests\CreateWeb_accountRequest;
 use App\Http\Requests\UpdateWeb_accountRequest;
 use App\Repositories\Web_accountRepository;
 use App\Http\Controllers\AppBaseController;
+use App\Models\Web_account;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
@@ -54,10 +55,9 @@ class Web_accountController extends AppBaseController
      */
     public function store(CreateWeb_accountRequest $request)
     {
-        $input = $request->all();
-
-        $webAccount = $this->webAccountRepository->create($input);
-
+        /** @var  \App\Models\Web_account $webAccount */
+        $webAccount = Web_account::create($request->all());
+        $webAccount->pc_accounts()->attach(request()->pc_account_id);
         Flash::success('Web Account saved successfully.');
 
         return redirect(route('webAccounts.index'));
@@ -72,7 +72,8 @@ class Web_accountController extends AppBaseController
      */
     public function show($id)
     {
-        $webAccount = $this->webAccountRepository->find($id);
+        /** @var  \App\Models\Web_account $webAccount */
+        $webAccount = Web_account::find($id);
 
         if (empty($webAccount)) {
             Flash::error('Web Account not found');
@@ -92,7 +93,8 @@ class Web_accountController extends AppBaseController
      */
     public function edit($id)
     {
-        $webAccount = $this->webAccountRepository->find($id);
+        /** @var  \App\Models\Web_account $webAccount */
+        $webAccount = Web_account::find($id);
 
         if (empty($webAccount)) {
             Flash::error('Web Account not found');
@@ -113,7 +115,8 @@ class Web_accountController extends AppBaseController
      */
     public function update($id, UpdateWeb_accountRequest $request)
     {
-        $webAccount = $this->webAccountRepository->find($id);
+        /** @var  \App\Models\Web_account $webAccount */
+        $webAccount = Web_account::find($id);
 
         if (empty($webAccount)) {
             Flash::error('Web Account not found');
@@ -139,17 +142,19 @@ class Web_accountController extends AppBaseController
      */
     public function destroy($id)
     {
-        $webAccount = $this->webAccountRepository->find($id);
+        /** @var  \App\Models\Web_account $webAccount */
+        $webAccount = Web_account::find($id);
 
         if (empty($webAccount)) {
             Flash::error('Web Account not found');
 
             return redirect(route('webAccounts.index'));
         }
+        $name = $webAccount->name;
+        $webAccount->delete($id);
+        $webAccount->pc_accounts()->detach();
 
-        $this->webAccountRepository->delete($id);
-
-        Flash::success('Web Account deleted successfully.');
+        Flash::success("WebAccount: ${name} を削除しました");
 
         return redirect(route('webAccounts.index'));
     }
