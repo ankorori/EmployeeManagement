@@ -8,6 +8,8 @@ use App\Models\PCos;
 use App\Models\Web_account_category;
 use App\Models\Office;
 use App\Models\department;
+use App\Models\employee;
+use App\Models\pc_account;
 
 class app_set_up extends Seeder
 {
@@ -79,6 +81,18 @@ class app_set_up extends Seeder
         Office::create([
             'id' => 3,
             'name' => '金沢',
+        ]);
+        employee::create([
+            'id' => 1,
+            'name' => 'web作成 市太郎',
+            'department_id' => 1,
+        ]);
+        pc_account::create([
+            'id' => 1,
+            'employee_id' => 1,
+            'password' => 'testpassword',
+            'settingdate' => new \DateTime('2022-02-09 00:00:00'),
+            'account_name' => 'PCaccountTest',
         ]);
     }
 }
