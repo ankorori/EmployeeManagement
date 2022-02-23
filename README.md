@@ -61,3 +61,23 @@ http://localhost
 ### memo
 - sudo chown -R hoge:hoge backend/
 - sudo chmod 777 -R  backend/storage/framework/sessions/
+
+#### vdebug
+- [Docker環境にXdebug3を導入&VSCodeでデバッグ](https://yutaro-blog.net/2021/07/08/laravel-docker-xdebug-vscode/)
+
+- [VSCode+Dockerコンテナ内のPHPをデバッグする際、host.docker.internalに接続できない問題の対処](https://qiita.com/tristar/items/6434acba715f7fe93694)
+```
+{
+    "name": "Listen for Xdebug",
+    "type": "php",
+    "request": "launch",
+    "hostname": "0.0.0.0",
+    "port": 9003,
+    "pathMappings": {
+        "/work/backend": "${workspaceRoot}/backend"
+    },
+    "ignore": [
+        "**/vendor/**/*.php"
+    ]
+},
+```
