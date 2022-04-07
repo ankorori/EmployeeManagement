@@ -38,6 +38,12 @@
     {!! Form::label('Web_accounts', 'Web-accounts:') !!}
     @foreach ($pcAccount->Web_accounts as $web_account)
     <br>
-    <strong><a href="{{ route('webAccounts.edit', [$web_account->id]) }}" class='btn btn-ghost-info'><i class="fa fa-edit"></i>{{ $web_account->web_account_category->name }}</a></strong>
+    @if ($web_account)
+        <strong><a href="{{ route('webAccounts.edit', [$web_account->id]) }}" class='btn btn-ghost-info'><i class="fa fa-edit"></i>{{ $web_account->web_account_category->name }}</a></strong>
+        <p>ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>{{ $web_account->name }}</strong></p>
+        <p>password:&nbsp;&nbsp;<strong>{{ $web_account->password }}</strong></p>
+    @else
+    <strong>登録無し</strong>
+    @endif
     @endforeach
 </div>

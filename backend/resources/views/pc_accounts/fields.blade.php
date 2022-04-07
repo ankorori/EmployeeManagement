@@ -18,15 +18,15 @@
 
 @push('scripts')
    <script type="text/javascript">
-           $('#settingdate').datetimepicker({
-               format: 'YYYY-MM-DD',
-               useCurrent: true,
-               icons: {
-                   up: "icon-arrow-up-circle icons font-2xl",
-                   down: "icon-arrow-down-circle icons font-2xl"
-               },
-               sideBySide: true
-           })
+            $('#settingdate').datetimepicker({
+                format: 'YYYY-MM-DD',
+                useCurrent: true,
+                icons: {
+                    up: "icon-arrow-up-circle icons font-2xl",
+                    down: "icon-arrow-down-circle icons font-2xl"
+                },
+                sideBySide: true
+            })
        </script>
 @endpush
 

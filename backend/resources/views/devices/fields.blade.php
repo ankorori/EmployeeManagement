@@ -1,3 +1,5 @@
+※PCアカウントのドロップダウンに登録したい人の名前が無い場合は<a href="{!! route('pcAccounts.create') !!}">こちら</a>から登録お願いします。<br>
+
 <!-- Devics Number Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('devics_number', 'Devics Number:') !!}
