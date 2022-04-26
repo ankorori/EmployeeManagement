@@ -1,7 +1,7 @@
 <!-- PC Account Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('PC_account', 'PC_Account:') !!}
-    {!! Form::select('pc_account_id', App\Models\pc_account::selectlist(), null, ['class' => 'form-control']) !!}
+    {!! Form::select('id', App\Models\pc_account::selectlist(), null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Name Field -->
@@ -19,7 +19,7 @@
 <!-- Account Category Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('Web_account_category_id', 'Account Category Id:') !!}
-    {!! Form::select('Web_account_category_id', App\Models\Web_account_category::selectlist(), null, ['class' => 'form-control']) !!}
+    {!! Form::select('id', App\Models\Web_account_category::selectlist(), null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Note Field -->
