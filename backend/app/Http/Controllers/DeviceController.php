@@ -55,9 +55,9 @@ class DeviceController extends AppBaseController
     public function store(CreateDeviceRequest $request)
     {
         $input = $request->all();
-
+         /** @var  \App\Models\Device $device */
         $device = $this->deviceRepository->create($input);
-        $device->pc_accounts()->attach(request()->pc_accounts);
+        $device->pc_accounts()->attach(request()->pc_accounts_id);
         Flash::success('Device saved successfully.');
 
         return redirect(route('devices.index'));

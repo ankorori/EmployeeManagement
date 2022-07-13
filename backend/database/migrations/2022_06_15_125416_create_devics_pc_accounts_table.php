@@ -13,11 +13,11 @@ class CreateDevicsPcAccountsTable extends Migration
      */
     public function up()
     {
-        Schema::create('devics_pc_accounts', function (Blueprint $table) {
+        Schema::create('device_pc_account', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('devics_id');
+            $table->unsignedBigInteger('device_id');
             $table->unsignedBigInteger('pc_account_id');
-            $table->foreign('devics_id')->references('id')->on('devices')->onDelete('cascade');
+            $table->foreign('device_id')->references('id')->on('devices')->onDelete('cascade');
             $table->foreign('pc_account_id')->references('id')->on('pc_accounts')->onDelete('cascade');
             $table->timestamps();
         });
@@ -30,6 +30,6 @@ class CreateDevicsPcAccountsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('devics_pc_accounts');
+        Schema::dropIfExists('device_pc_account');
     }
 }

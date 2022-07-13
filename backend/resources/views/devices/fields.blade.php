@@ -104,8 +104,8 @@
 <div class="form-group col-sm-6">
     {!! Form::label('mailer', 'Mailer:') !!}
     <label class="checkbox-inline">
-        {!! Form::hidden('mailer', 0) !!}
-        {!! Form::checkbox('mailer', '1', null) !!}
+        {!! Form::hidden('mailer_id', 0) !!}
+        {!! Form::checkbox('mailer_id', '1', null) !!}
     </label>
 </div>
 
@@ -114,8 +114,8 @@
 <div class="form-group col-sm-6">
     {!! Form::label('antivirus_software', 'Antivirus Software:') !!}
     <label class="checkbox-inline">
-        {!! Form::hidden('antivirus_software', 0) !!}
-        {!! Form::checkbox('antivirus_software', '1', null) !!}
+        {!! Form::hidden('antivirus_software_id', 0) !!}
+        {!! Form::checkbox('antivirus_software_id', '1', null) !!}
     </label>
 </div>
 
