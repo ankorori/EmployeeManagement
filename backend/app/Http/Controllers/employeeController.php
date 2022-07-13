@@ -155,7 +155,7 @@ class employeeController extends AppBaseController
 
         $this->employeeRepository->delete($id);
 
-        Flash::success('Employee deleted successfully.');
+        Flash::success($employee->name . 'さんを削除しました');
 
         return redirect(route('employees.index'));
     }

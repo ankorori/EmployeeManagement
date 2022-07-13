@@ -57,7 +57,7 @@ class DeviceController extends AppBaseController
         $input = $request->all();
 
         $device = $this->deviceRepository->create($input);
-
+        $device->pc_accounts()->attach(request()->pc_accounts);
         Flash::success('Device saved successfully.');
 
         return redirect(route('devices.index'));

@@ -91,7 +91,7 @@ class app_set_up extends Seeder
             'id' => 1,
             'employee_id' => 1,
             'password' => 'testpassword',
-            'settingdate' => new \DateTime('2022-02-09 00:00:00'),
+            'settingdate' => new \DateTime(),
             'account_name' => 'PCaccountTest',
         ]);
     }
