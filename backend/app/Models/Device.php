@@ -95,8 +95,8 @@ class Device extends \Illuminate\Database\Eloquent\Model
         return $this->belongsTo('\App\Models\PCos', 'ostype_id', 'id');
     }
 
-    public function pc_account()
+    public function pc_accounts()
     {
-        return $this->belongsTo('\App\Models\pc_account', 'pc_account_id', 'id');
+        return $this->belongsToMany('\App\Models\pc_account')->withTimestamps();
     }
 }
