@@ -97,4 +97,9 @@ class Device extends \Illuminate\Database\Eloquent\Model
     {
         return $this->belongsToMany('\App\Models\pc_account')->withTimestamps();
     }
+
+    public function web_browser()
+    {
+        return $this->belongsTo('\App\Models\Web_browser');
+    }
 }
