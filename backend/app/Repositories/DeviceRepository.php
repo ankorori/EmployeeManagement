@@ -20,7 +20,6 @@ class DeviceRepository extends BaseRepository
         'devics_number',
         'company',
         'pc_name',
-        'pc_account_id',
         'ostype_id',
         'is_cd_dvd_drive',
         'is_wired_LAN',
@@ -29,8 +28,8 @@ class DeviceRepository extends BaseRepository
         'is_taking_out',
         'is_LanScopeCat',
         'web_browser_id',
-        'mailer',
-        'antivirus_software'
+        'mailer_id',
+        'antivirus_software_id'
     ];
 
     /**

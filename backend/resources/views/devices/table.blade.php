@@ -25,7 +25,9 @@
                 <td>{{ $device->devics_number }}</td>
                 <td>{{ $device->company }}</td>
                 <td>{{ $device->pc_name }}</td>
-                <td><a href="{{ route('pcAccounts.show', [$device->pc_account->id]) }}">{{ $device->pc_account->account_name }}</a></td>
+                @foreach ($device->pc_accounts as $pc_account)
+                    <a href="{{ route('pcAccounts.show', [$pc_account]) }}">{{ $pc_account->account_name }}</a>
+                @endforeach
                 <td>{{ $device->PCos->name }}</td>
                 <td>{{ $device->is_cd_dvd_drive ? '有' : '無'}}</td>
                 <td>{{ $device->is_wired_LAN ? '有' : '無' }}</td>

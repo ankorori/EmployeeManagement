@@ -73,13 +73,13 @@
 <!-- Mailer Field -->
 <div class="form-group">
     {!! Form::label('mailer', 'Mailer:') !!}
-    <p>{{ $device->mailer }}</p>
+    <p>{{ $device->mailer_id }}</p>
 </div>
 
 <!-- Antivirus Software Field -->
 <div class="form-group">
     {!! Form::label('antivirus_software', 'Antivirus Software:') !!}
-    <p>{{ $device->antivirus_software }}</p>
+    <p>{{ $device->antivirus_software_id }}</p>
 </div>
 
 <!-- Created At Field -->

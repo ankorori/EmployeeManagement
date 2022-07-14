@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 /**
  * @SWG\Definition(
  *      definition="Device",
- *      required={"devics_number", "company", "pc_name", "pc_account_id", "ostype_id"},
+ *      required={"devics_number", "company", "pc_name", "ostype_id"},
  *      @SWG\Property(
  *          property="devics_number",
  *          description="devics_number",
@@ -53,7 +53,6 @@ class Device extends \Illuminate\Database\Eloquent\Model
         'devics_number',
         'company',
         'pc_name',
-        'pc_account_id',
         'ostype_id',
         'is_cd_dvd_drive',
         'is_wired_LAN',
@@ -62,8 +61,8 @@ class Device extends \Illuminate\Database\Eloquent\Model
         'is_taking_out',
         'is_LanScopeCat',
         'web_browser_id',
-        'mailer',
-        'antivirus_software'
+        'mailer_id',
+        'antivirus_software_id'
     ];
 
     /**
@@ -86,7 +85,6 @@ class Device extends \Illuminate\Database\Eloquent\Model
         'devics_number' => 'required|max:20',
         'company' => 'required|max:20',
         'pc_name' => 'required|max:20',
-        'pc_account_id' => 'required',
         'ostype_id' => 'required'
     ];
 

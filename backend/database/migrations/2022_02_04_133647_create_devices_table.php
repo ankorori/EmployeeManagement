@@ -19,8 +19,6 @@ class CreateDevicesTable extends Migration
             $table->string('devics_number');
             $table->string('company');
             $table->string('pc_name');
-            $table->biginteger('pc_account_id')->unsigned();
-            $table->foreign('pc_account_id')->references('id')->on('pc_accounts');
             $table->biginteger('ostype_id')->unsigned();
             $table->foreign('ostype_id')->references('id')->on('pc_os');
             $table->boolean('is_cd_dvd_drive');
@@ -30,8 +28,8 @@ class CreateDevicesTable extends Migration
             $table->boolean('is_taking_out');
             $table->boolean('is_LanScopeCat');
             $table->biginteger('web_browser_id');
-            $table->biginteger('mailer');
-            $table->biginteger('antivirus_software');
+            $table->biginteger('mailer_id');
+            $table->biginteger('antivirus_software_id');
             $table->timestamps();
             $table->softDeletes();
         });
