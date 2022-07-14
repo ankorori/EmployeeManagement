@@ -92,11 +92,8 @@
 
 <!-- Web Browser Id Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('web_browser_id', 'Web Browser Id:') !!}
-    <label class="checkbox-inline">
-        {!! Form::hidden('web_browser_id', 0) !!}
-        {!! Form::checkbox('web_browser_id', '1', null) !!}
-    </label>
+    {!! Form::label('web_browser', 'web_browser:') !!}
+    {!! Form::select('web_browser_id', App\Models\web_browser::selectlist(), null, ['class' => 'form-control']) !!}
 </div>
 
 

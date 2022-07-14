@@ -10,6 +10,7 @@ use App\Models\Office;
 use App\Models\department;
 use App\Models\employee;
 use App\Models\pc_account;
+use App\Models\Web_browser;
 
 class app_set_up extends Seeder
 {
@@ -93,6 +94,18 @@ class app_set_up extends Seeder
             'password' => 'testpassword',
             'settingdate' => new \DateTime(),
             'account_name' => 'PCaccountTest',
+        ]);
+        web_browser::create([
+            'id' => 1,
+            'name' => 'Microsoft Edge',
+        ]);
+        web_browser::create([
+            'id' => 2,
+            'name' => 'Google Chrome',
+        ]);
+        web_browser::create([
+            'id' => 3,
+            'name' => 'Mozilla Fire fox',
         ]);
     }
 }

@@ -79,3 +79,9 @@
         <span>Devices</span>
     </a>
 </li> --}}
+<li class="nav-item {{ Request::is('webBrowsers*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('webBrowsers.index') }}">
+        <i class="nav-icon icon-cursor"></i>
+        <span>Web Browsers</span>
+    </a>
+</li>

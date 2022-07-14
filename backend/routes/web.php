@@ -28,4 +28,5 @@ Route::middleware('auth')->group(function () {
     Route::resource('webAccountCategories', App\Http\Controllers\Web_account_categoryController::class);
     Route::resource('offices', App\Http\Controllers\OfficeController::class);
     Route::resource('devices', App\Http\Controllers\DeviceController::class);
+    Route::resource('webBrowsers', App\Http\Controllers\Web_browserController::class);
 });
