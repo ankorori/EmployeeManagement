@@ -27,7 +27,8 @@ class CreateDevicesTable extends Migration
             $table->boolean('is_internet');
             $table->boolean('is_taking_out');
             $table->boolean('is_LanScopeCat');
-            $table->biginteger('web_browser_id');
+            $table->biginteger('web_browser_id')->unsigned();
+            $table->foreign('web_browser_id')->references('id')->on('web_browsers');
             $table->biginteger('mailer_id');
             $table->biginteger('antivirus_software_id');
             $table->timestamps();

@@ -29,6 +29,6 @@ class CreatePCosTable extends Migration
      */
     public function down()
     {
-        Schema::drop('p_cos');
+        Schema::drop('pc_os');
     }
 }
