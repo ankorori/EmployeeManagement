@@ -25,9 +25,11 @@
                 <td>{{ $device->devics_number }}</td>
                 <td>{{ $device->company }}</td>
                 <td>{{ $device->pc_name }}</td>
+                <td>
                 @foreach ($device->pc_accounts as $pc_account)
                     <a href="{{ route('pcAccounts.show', [$pc_account]) }}">{{ $pc_account->account_name }}</a>
                 @endforeach
+                </td>
                 <td>{{ $device->PCos->name }}</td>
                 <td>{{ $device->is_cd_dvd_drive ? '有' : '無'}}</td>
                 <td>{{ $device->is_wired_LAN ? '有' : '無' }}</td>
@@ -35,7 +37,7 @@
                 <td>{{ $device->is_internet ? '有' : '無' }}</td>
                 <td>{{ $device->is_taking_out ? '有' : '無' }}</td>
                 <td>{{ $device->is_LanScopeCat ? '有' : '無' }}</td>
-                <td>{{ $device->web_browser_id }}</td>
+                <td>{{ $device->web_browser->name }}</td>
                 <td>{{ $device->mailer }}</td>
                 <td>{{ $device->antivirus_software }}</td>
                 <td>

@@ -97,7 +97,7 @@ class pc_account extends \Illuminate\Database\Eloquent\Model
     {
         return $this->belongsToMany('\App\Models\Web_account','web_account_pc_account')->withTimestamps();
     }
-    public function device()
+    public function devices()
     {
         return $this->belongsToMany('\App\Models\Device')->withTimestamps();
     }
