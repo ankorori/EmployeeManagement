@@ -30,4 +30,5 @@ Route::middleware('auth')->group(function () {
     Route::resource('devices', App\Http\Controllers\DeviceController::class);
     Route::resource('webBrowsers', App\Http\Controllers\Web_browserController::class);
     Route::resource('mailers', App\Http\Controllers\MailerController::class);
+    Route::resource('antivirusSoftware', App\Http\Controllers\AntivirusSoftwareController::class);
 });

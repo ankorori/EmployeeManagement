@@ -13,7 +13,8 @@
       <a class="dropdown-item" href="{{ route('pcAccounts.index') }}">pcアカウント一覧</a>
       <a class="dropdown-item" href="{{ route('pcos.index') }}">使用OS一覧</a>
       <a class="dropdown-item" href="{{ route('webBrowsers.index') }}">使用webブラウザ一覧</a>
-      <a class="nav-link" href="{{ route('mailers.index') }}">使用mailer一覧</a>
+      <a class="dropdown-item" href="{{ route('mailers.index') }}">使用mailer一覧</a>
+      <a class="dropdown-item" href="{{ route('antivirusSoftware.index') }}">
     </div>
 </li>
 <li class="nav-item dropdown">
