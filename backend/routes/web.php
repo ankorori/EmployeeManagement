@@ -29,4 +29,5 @@ Route::middleware('auth')->group(function () {
     Route::resource('offices', App\Http\Controllers\OfficeController::class);
     Route::resource('devices', App\Http\Controllers\DeviceController::class);
     Route::resource('webBrowsers', App\Http\Controllers\Web_browserController::class);
+    Route::resource('mailers', App\Http\Controllers\MailerController::class);
 });
