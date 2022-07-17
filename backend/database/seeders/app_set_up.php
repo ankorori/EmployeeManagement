@@ -11,6 +11,8 @@ use App\Models\department;
 use App\Models\employee;
 use App\Models\pc_account;
 use App\Models\Web_browser;
+use App\Models\Mailer;
+use App\Models\AntivirusSoftware;
 
 class app_set_up extends Seeder
 {
@@ -106,6 +108,14 @@ class app_set_up extends Seeder
         web_browser::create([
             'id' => 3,
             'name' => 'Mozilla Fire fox',
+        ]);
+        Mailer::create([
+            'id' => 1,
+            'name' => 'Mozilla Thunderbird',
+        ]);
+        AntivirusSoftware::create([
+            'id' => 1,
+            'name' => 'Avast Antivirus',
         ]);
     }
 }
